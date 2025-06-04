@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn-Regular.woff2') format('woff2'),
+  url('/fonts/Vazirmatn-Regular.woff') format('woff'),
+  url('/fonts/Vazirmatn-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,5 +32,47 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, 'Vazirmatn', sans-serif;
+  direction: rtl;
+}
+
+/* GLOBAL SCROLLBAR STYLES */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Hide the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  display: none;
+  background-color: #666;
+}
+
+/* Hide scrollbar arrows */
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin; /* Makes it thinner */
+  scrollbar-color: #999 transparent; /* Thumb + track color */
+}
+
+.scroll-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
