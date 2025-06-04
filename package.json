@@ -1,10 +1,10 @@
 {
-  "name": "user_web",
+  "name": "video_user_web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "PORT=3030 next build",
     "start": "next start",
     "lint": "next lint"
   },
