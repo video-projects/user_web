@@ -33,7 +33,7 @@ export default function Chat() {
     };
 
     return (
-        <div style={{ maxWidth: 600, margin: 'auto', padding: 20 }}>
+        <div className="w-full">
             <h1>چت روم زنده</h1>
             <div
                 style={{
